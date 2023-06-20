@@ -1,0 +1,7 @@
+{
+  "common" : {
+    "example_key" : "Example Value",
+    "name" : "Canvas Connect",
+    "message_placeholder": "Enter message..."
+  }
+}
