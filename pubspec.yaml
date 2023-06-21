@@ -23,13 +23,13 @@ dependencies:
   firebase_core: 2.14.0
 
 
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.5
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.1
 
 
 flutter:

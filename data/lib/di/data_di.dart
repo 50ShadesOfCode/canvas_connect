@@ -10,6 +10,7 @@ class DataDI {
   void initDependencies() {
     _initServerpod();
     _initRepository();
+    _initUsecase();
   }
 
   void _initServerpod() {
@@ -22,6 +23,24 @@ class DataDI {
     appLocator.registerSingleton<SocketRepository>(
       SocketRepositoryImpl(
         socketProvider: appLocator.get<SocketProvider>(),
+      ),
+    );
+  }
+
+  void _initUsecase() {
+    appLocator.registerFactory<ListenForMessagesStreamUseCase>(
+      () => ListenForMessagesStreamUseCase(
+        socketRepository: appLocator<SocketRepository>(),
+      ),
+    );
+    appLocator.registerFactory<SendMessageUseCase>(
+      () => SendMessageUseCase(
+        socketRepository: appLocator<SocketRepository>(),
+      ),
+    );
+    appLocator.registerFactory<ConnectUseCase>(
+      () => ConnectUseCase(
+        socketRepository: appLocator<SocketRepository>(),
       ),
     );
   }
