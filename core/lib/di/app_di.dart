@@ -1,5 +1,4 @@
 import 'package:domain/domain.dart';
-import 'package:domain/usecases/export_usecases.dart';
 import 'package:get_it/get_it.dart';
 import 'package:navigation/app_router/app_router.dart';
 

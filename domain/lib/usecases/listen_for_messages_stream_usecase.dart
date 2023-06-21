@@ -1,9 +1,7 @@
-import 'package:core/core.dart';
-
 import '../domain.dart';
-import 'usecase.dart';
 
-class ListenForMessagesStreamUseCase extends StreamUseCase<NoParams, Message> {
+class ListenForMessagesStreamUseCase
+    extends StreamUseCase<NoParams, MessageModel> {
   final SocketRepository socketRepository;
 
   ListenForMessagesStreamUseCase({
@@ -11,7 +9,7 @@ class ListenForMessagesStreamUseCase extends StreamUseCase<NoParams, Message> {
   });
 
   @override
-  Stream<Message> execute(NoParams input) {
+  Stream<MessageModel> execute(NoParams input) {
     return socketRepository.listenForMessages();
   }
 }

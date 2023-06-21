@@ -20,7 +20,7 @@ class _$AppRouter extends RootStackRouter {
     ChatRoute.name: (routeData) {
       return MaterialPageX<dynamic>(
         routeData: routeData,
-        child: ChatScreen(),
+        child: const ChatScreen(),
       );
     }
   };

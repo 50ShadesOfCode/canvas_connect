@@ -1,4 +1,4 @@
-import 'package:core/core.dart';
+import 'package:domain/domain.dart';
 import 'package:flutter/foundation.dart';
 
 @immutable
@@ -9,11 +9,15 @@ class InitChatEvent extends ChatEvent {}
 class SendMessageEvent extends ChatEvent {
   final String message;
 
-  SendMessageEvent({required this.message});
+  SendMessageEvent({
+    required this.message,
+  });
 }
 
 class MessageAddEvent extends ChatEvent {
-  final Message message;
+  final MessageModel message;
 
-  MessageAddEvent({required this.message});
+  MessageAddEvent({
+    required this.message,
+  });
 }

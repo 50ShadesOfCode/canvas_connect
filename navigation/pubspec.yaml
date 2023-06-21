@@ -16,8 +16,6 @@ dependencies:
     path: ../core_ui
   domain:
     path: ../domain
-  home:
-    path: ../feature/home
   chat:
     path: ../feature/chat
 

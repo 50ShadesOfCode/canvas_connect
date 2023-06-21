@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:domain/domain.dart';
 
-
 class ErrorHandler {
   Future<Never> handleError(DioError error) async {
     final Response<dynamic>? response = error.response;
@@ -12,7 +11,8 @@ class ErrorHandler {
       if (statusCode != null) {
         if (statusCode == 400) {
           throw AppException(
-              error.response?.data['message'] ?? 'empty message');
+            error.response?.data['message'] ?? 'empty message',
+          );
         }
 
         if (statusCode == 401) {

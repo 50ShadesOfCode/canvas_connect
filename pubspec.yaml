@@ -4,7 +4,7 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: '>=3.0.3 <4.0.0'
 
 dependencies:
   flutter:
@@ -19,6 +19,8 @@ dependencies:
     path: ./data
   navigation:
     path: ./navigation
+
+  firebase_core: 2.14.0
 
 
   cupertino_icons: ^1.0.2

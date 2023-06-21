@@ -1,11 +1,11 @@
-import 'package:core/core.dart';
+import '../models/models.dart';
 
-abstract class SocketRepository {
+interface class SocketRepository {
   SocketRepository();
 
-  Stream<Message> listenForMessages() async* {}
+  Stream<MessageModel> listenForMessages() async* {}
 
-  Future<void> sendMessage(Message msg) async {}
+  Future<void> sendMessage(MessageModel message) async {}
 
-  void connect() {}
+  Future<void> connect() async {}
 }

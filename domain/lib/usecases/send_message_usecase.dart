@@ -1,9 +1,6 @@
-import 'package:core/core.dart';
 import '../domain.dart';
 
-import 'usecase.dart';
-
-class SendMessageUseCase extends FutureUseCase<Message, void> {
+class SendMessageUseCase extends FutureUseCase<MessageModel, void> {
   final SocketRepository socketRepository;
 
   SendMessageUseCase({
@@ -11,7 +8,7 @@ class SendMessageUseCase extends FutureUseCase<Message, void> {
   });
 
   @override
-  Future<void> execute(Message input) async {
+  Future<void> execute(MessageModel input) async {
     await socketRepository.sendMessage(input);
   }
 }

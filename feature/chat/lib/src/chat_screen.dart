@@ -12,11 +12,12 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<ChatBloc>(
       create: (BuildContext context) => ChatBloc(
-        appLocator<ConnectUseCase>(),
-        appLocator<SendMessageUseCase>(),
-        appLocator<ListenForMessagesStreamUseCase>(),
-      )..add(InitChatEvent()),
-      child: ChatForm(),
+        connectUseCase: appLocator<ConnectUseCase>(),
+        sendMessageUseCase: appLocator<SendMessageUseCase>(),
+        listenForMessagesStreamUseCase:
+            appLocator<ListenForMessagesStreamUseCase>(),
+      ),
+      child: const ChatForm(),
     );
   }
 }

@@ -8,7 +8,7 @@ class SocketProvider {
       : client = Client('http://192.168.135.236:8080/')
           ..connectivityMonitor = FlutterConnectivityMonitor();
 
-  Future<void> sendMessage(Message msg) async {
-    await client.canvasConnect.sendStreamMessage(msg);
+  Future<void> sendMessage(Message message) async {
+    await client.canvasConnect.sendStreamMessage(message);
   }
 }

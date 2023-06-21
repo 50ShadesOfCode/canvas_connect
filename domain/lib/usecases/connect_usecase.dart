@@ -1,5 +1,4 @@
 import '../domain.dart';
-import 'usecase.dart';
 
 class ConnectUseCase extends UseCase<NoParams, void> {
   final SocketRepository socketRepository;

@@ -50,7 +50,11 @@ class AppDimens {
   static const double modalHeightDetailDiscount = 350;
   static const double heightMarketStatisticsChart = 380;
   static const double maxHeightOfVideos = 400;
+  static const double sendButtonSpacing = 15;
+  static const double sendIconSize = 18;
+  static const double messageBarHeight = 60;
 
+  static const double ELEVATION_0 = 0.0;
   static const double ELEVATION_2 = 2.0;
   static const double ELEVATION_8 = 8.0;
 
